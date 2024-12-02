@@ -2,10 +2,12 @@ phases:
   install: 
     commands:
       - echo Installing dependencies...
+      - cd src  # Change this if package.json is in a different directory
       - npm install
   build:
     commands:
       - echo Running tests...
+      - cd src  # Ensure you are in the right directory
       - npm test
 artifacts:
   files:
